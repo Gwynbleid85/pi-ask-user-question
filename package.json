@@ -1,0 +1,34 @@
+{
+  "name": "pi-ask-user-question",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive user questions for Pi with native Herdr Core and legacy Herdr waiting-state support",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gwynbleid85/pi-ask-user-question.git"
+  },
+  "keywords": ["pi-package", "pi-extension", "herdr", "questions"],
+  "files": ["extensions", "README.md", "LICENSE"],
+  "engines": { "node": ">=22.18.0" },
+  "scripts": {
+    "test": "node --test test/*.test.ts"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/ask-user-question.ts",
+      "./extensions/herdr-ui-prompts.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.5.2",
+    "@earendil-works/pi-tui": "1.5.2",
+    "typebox": "1.3.27"
+  }
+}
